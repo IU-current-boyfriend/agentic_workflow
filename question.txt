@@ -1,0 +1,26 @@
+
+1. memory 概念不太清楚，文档里面有讲短期记忆和长期记忆
+https://developers.llamaindex.ai/python/framework/module_guides/deploying/agents/memory/
+
+旧版和新版有区别，其次token_limit决定获取llm的token，决定历史消息token的上限
+memory = Memory.from_defaults(
+                token_limit = self.llm.metadata.context_window
+            )
+
+
+
+2. ctx.write_event_to_stream() 流事件 好好看看
+https://developers.llamaindex.ai/python/llamaagents/workflows/streaming/
+
+
+3. self.output_parser.parse(chat_response.message.content)
+不理解这个输出处于什么流程，是llm返回ids，还是服务端返回的json格式
+chat_response.message.content 全量输出llm响应内容
+
+
+4.  # call tools -- safely 这里的safely是指tools call是安全的，还是需要保证它是安全的
+
+
+
+
+Function Agent and ReAct Agent -> 区别 llamaindex
